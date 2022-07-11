@@ -7,6 +7,8 @@ const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
 
+//Employee array
+const employeeArray = [];
 
 //Add Manager
 const addManager = () => {
@@ -132,3 +134,11 @@ const addIntern = () => {
             addEmployee();
         });
 };
+
+// Generate HTML
+const generateHtml = () => {
+    fs.writeFile('./dist/index.html', pageTemplate(employeeArray));
+    console.log('Profile Page Successfully Generated!');
+};
+
+addManager();
