@@ -6,3 +6,41 @@ const Employee = require('./Employee');
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
+
+
+//Add Manager
+const addManager() {
+    console.log('Lets build your Teams Profile Page.')
+    return inquirer
+        .prompt([
+            {
+                type: 'input',
+                name: 'Name',
+                message: 'Enter Managers Name:',
+            },
+            {
+                type: 'input',
+                name: 'Id',
+                message: 'Enter Managers Id:',
+            },
+            {
+                type: 'input',
+                name: 'Email',
+                message: 'Enter Managers Email:',
+            },
+            {
+                type: 'input',
+                name: 'OfficeNumber',
+                message: 'Enter Office Phone Number:'
+            },
+        ])
+        .then(answers => {
+            const manager = new Manager(answers.Name,answers.Id,answers.Email,answers.OfficeNumber);
+            employeeArray.push(manager);
+
+            addEmployee();
+        })     
+
+};
+
+//Add Employee
