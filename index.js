@@ -9,7 +9,7 @@ const Manager = require('../lib/Manager');
 
 
 //Add Manager
-const addManager() {
+const addManager = () => {
     console.log('Lets build your Teams Profile Page.')
     return inquirer
         .prompt([
@@ -44,3 +44,27 @@ const addManager() {
 };
 
 //Add Employee
+const addEmployee = () => {
+    return inquirer
+        .prompt([
+            {
+                type:'list',
+                name: 'choices',
+                message: 'Which type of Employee would you like to add?',
+                choices: ['Engineer', 'Intern', 'Quit']
+            }
+        ])
+        .then((choice) => {
+            switch (choice.choices) {
+                case 'Engineer':
+                    addEngineer();
+                    break;
+                case 'Intern':
+                    addIntern();
+                    break;
+                case 'Quit':
+                    generateHtml();
+                    break;        
+            }
+        });
+}
