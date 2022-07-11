@@ -67,7 +67,7 @@ const addEmployee = () => {
                     break;        
             }
         });
-}
+};
 
 //Add Engineer
 const addEngineer = () => {
@@ -99,4 +99,36 @@ const addEngineer = () => {
             employeeArray.push(engineer);
             addEmployee();
         });
-}
+};
+
+//Add Intern
+const addIntern = () => {
+    return inquirer
+        .prompt([
+            {
+                type: 'input',
+                name: 'Name',
+                message: 'Enter Interns Name:',
+            },
+            {
+                type: 'input',
+                name: 'Id',
+                message: 'Enter Interns ID:',
+            },
+            {
+                type: 'input',
+                name: 'Email',
+                message: 'Enter Interns Email:',
+            },
+            {
+                type: 'input',
+                name: 'School',
+                message: 'Enter Interns School:',
+            },
+        ])
+        .then((answers) => {
+            const intern = new Intern(answers.Name, answers.Id, answers.Email, answers.School);
+            employeeArray.push(intern);
+            addEmployee();
+        });
+};
