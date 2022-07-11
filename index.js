@@ -68,3 +68,35 @@ const addEmployee = () => {
             }
         });
 }
+
+//Add Engineer
+const addEngineer = () => {
+    return inquirer
+        .prompt([
+            {
+                type: 'input',
+                name: 'Name',
+                message: 'Enter Engineers Name:',
+            },
+            {
+                type: 'input',
+                name: 'Id',
+                message: 'Enter Engineers Id:',
+            },
+            {
+                type: 'input',
+                name: 'Email',
+                message: 'Enter Engineers Email:',
+            },
+            {
+                type: 'input',
+                name: 'Github',
+                message: 'Enter Engineers Github:',
+            },
+        ])
+        .then((answers) => {
+            const engineer = new Engineer(answers.Name, answers.Id, answers.Email, answers.Github);
+            employeeArray.push(engineer);
+            addEmployee();
+        });
+}
