@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/mo9399/Team-Profile-Generator#readme",
   "dependencies": {
-    "inquirer": "^9.0.0",
-    "jest": "^28.1.2"
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.4",
+    "jest": "^27.5.1"
   }
 }

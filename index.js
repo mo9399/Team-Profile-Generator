@@ -1,11 +1,11 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const path = require('path')
+const path = require('path');
 
-const Employee = require('./Employee');
-const Engineer = require('../lib/Engineer');
-const Intern = require('../lib/Intern');
-const Manager = require('../lib/Manager');
+const Employee = require('./lib/Employee');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const Manager = require('./lib/Manager');
 
 //Create Page
 const pageTemplate = require('./src/template');
@@ -44,7 +44,7 @@ const addManager = () => {
             employeeArray.push(manager);
 
             addEmployee();
-        })     
+        });     
 
 };
 
