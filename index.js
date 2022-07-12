@@ -140,8 +140,12 @@ const addIntern = () => {
 
 // Generate HTML
 const generateHtml = () => {
-    fs.writeFile('./dist/index.html', pageTemplate(employeeArray));
-    console.log('Profile Page Successfully Generated!');
+    fs.writeFile('./dist/index.html', pageTemplate(employeeArray), (err) => {
+        // If an error is detected
+        if(err) console.error(`Error generating document ${err}`);
+        // If successful
+        console.log('Profile Page Successfully Generated!');
+    });
 };
 
 addManager();
