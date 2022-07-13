@@ -5,10 +5,11 @@ const htmlPage = team => {
         return `
         <div class='card'>
         <div class='card-header text center'>
+        <img src="./images/Manager.png" class="profile-pic">
            <h2 class='card-title'>${newManager.getName()}</h2>
            <h3 class='card-title'>${newManager.getRole()}</h3>
         </div>
-        <div class='card-body'>
+        <div class='card-body text-center'>
            <ul class='list-group'>
                <li class='list-group-item'>ID: ${newManager.getId()}</li>
                <li class='list-group-item'>Email: <a href= 'mailto:${newManager.getEmail()}'>${newManager.getEmail()}</a></li>
@@ -23,7 +24,8 @@ const htmlPage = team => {
     const engineerCard = newEngineer => {
         return `
         <div class="card">
-        <div class="card-header">
+        <div class='card-header text center'>
+        <img src="./images/Engineer.png" class="profile-pic">
             <h2 class="card-title">${newEngineer.getName()}</h2>
             <h3 class="card-title">${newEngineer.getRole()}</h3>
         </div>
@@ -42,7 +44,8 @@ const htmlPage = team => {
     const internCard = newIntern => {
         return `
         <div class="card">
-        <div class="card-header">
+        <div class='card-header text center'>
+        <img src="./images/Intern.png" class="profile-pic">
             <h2 class="card-title">${newIntern.getName()}</h2>
             <h3 class="card-title"> ${newIntern.getRole()}</h3>
         </div>
@@ -94,19 +97,19 @@ const htmlPage = team => {
             <title>Team Profile Page</title>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-            <link rel="stylesheet" href="/dist/css/style.css">
+            <link rel="stylesheet" href="./css/style.css">
         </head>
         <body>
           <div class="container-fluid">
               <div class="row">
-                  <div class="col-12 jumbotron mb-3 bg-dark">
-                      <h1 class="text-center">Team Profile Page</h1>
+              <div class="header col-12 mb-3 ">
+                    <h1 class="title">Team Profile Page</h1>
                   </div>
               </div>
           </div>
           <div class="container">
               <div class="row">
-                  <div class="col-12 d-flex justify-content-center">
+                  <div class="col-12 d-flex">
                       ${htmlPage(newEmployee)}
                   </div>
               </div>

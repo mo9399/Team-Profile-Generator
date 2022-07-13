@@ -1,0 +1,74 @@
+.profile-pic {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 5px solid #272133;
+    margin-top: 20px;
+    box-shadow: 0 7px 25px rgb(255, 0, 0);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+.card h2 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    text-align:center
+    }
+      
+.card h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    text-align:center;
+    text-transform:uppercase;
+    }  
+      
+.card-body {
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    border: 1px solid #272133;
+    box-shadow: 0 7px 25px rgb(0, 0, 0);
+    
+    }
+    
+.list-group {
+    border:1px solid #272133;
+    box-shadow: 0 7px 25px rgb(0, 0, 0);
+    } 
+    
+.card-header {
+    border:1px solid #272133;
+    box-shadow: 0 7px 25px rgb(0, 0, 0);
+        
+    }
+
+.header {
+    margin: 0;
+    padding: 2em 5em 4em;
+    color: #efefef;
+    overflow: hidden;
+    position: relative;
+    
+    }  
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: skewY(-4deg);
+    background:linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    transform-origin: bottom left;
+    z-index: -1;
+    }
+
+.title {
+    text-align: left;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} 
+
+.card {
+    display: inline-block;
+    margin: 0 auto;
+}
